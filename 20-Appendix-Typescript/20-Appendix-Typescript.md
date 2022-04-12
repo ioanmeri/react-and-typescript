@@ -14,7 +14,7 @@ The TS Type System
 
 - Doesn't provide any performance optimization
 
-## Flow
+### Flow
 
 - Typescript Code (JavaScript with type annotations)
 
@@ -28,7 +28,7 @@ Always executing JS
 
 [In browser typescript compiler](https://typescriptlang.org/play)
 
-## Summary
+### Summary
 
 - Writing Typescript is the **same** as writing Javascript with some "extra documentation"
 
@@ -36,7 +36,7 @@ Always executing JS
 
 - It is best to think of Typescript as being like a friend sitting behind you while you are coding.
 
-## Typescript compiler
+### Typescript compiler
 
 ```
 npm install -g typescript ts-node
@@ -52,7 +52,7 @@ Compile a file: `tsc index.ts`, that creates a index.js file which can be run wi
 
 - Automatically executes the resulting JavaScript
 
-## Focus
+### Focus
 
 - Syntax + Features
 
@@ -70,3 +70,80 @@ Compile a file: `tsc index.ts`, that creates a index.js file which can be run wi
   How do we use interfaces to write reusable code?
 
   - Projects
+
+## Types
+
+Easy way to refer to different properties + functions that a value has
+
+"red"
+
+- It's a string
+- It a value that has all the properties + methods that we assume that a string has
+
+Properties + Methods a 'string' has in JS
+
+- charAt()
+- charCodeAt()
+- concat()
+- includes()
+- endsWith()
+- indexOf()
+- lastIndexOf()
+- localeCompare()
+- match()
+
+### More on types
+
+string
+
+- 'hi there'
+- ""
+- 'Today is Monday'
+
+number
+
+- .000025
+- -20
+- 4000000
+
+boolean
+
+- true
+- false
+
+Date
+
+- new Date()
+
+Todo
+
+- {id: 1, completed: true, title: "Trash"}
+
+### Primitive and Object Types
+
+Primitive Types
+
+- number
+- string
+- boolean
+- symbol
+- void
+- null
+- undefined
+
+Object Types
+
+- functions
+- classes
+- arrays
+- objects
+
+### Why do we care about types?
+
+- Types are used by the Typescript Compiler to analyze our code for errors
+
+- Types allow other engineers to understand what values are flowing around our codebase
+
+### Where do we use types?
+
+- Everywhere!
