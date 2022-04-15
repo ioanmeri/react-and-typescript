@@ -36,7 +36,7 @@ Always executing JS
 
 - It is best to think of Typescript as being like a friend sitting behind you while you are coding.
 
-### Typescript compiler
+## Typescript compiler
 
 ```
 npm install -g typescript ts-node
@@ -52,7 +52,7 @@ Compile a file: `tsc index.ts`, that creates a index.js file which can be run wi
 
 - Automatically executes the resulting JavaScript
 
-### Focus
+## Focus
 
 - Syntax + Features
 
@@ -154,7 +154,7 @@ Object Types
 - Functions
 - Objects
 
-### Type annotations
+## Type annotations
 
 Code we add to tell Typescript what type of value a variable will refer to
 
@@ -166,7 +166,7 @@ Code we add to tell Typescript what type of value a variable will refer to
 
 - When a function returns the 'any' type and we need to clarify the value
 
-### Type inference
+## Type inference
 
 #### When to use
 
@@ -197,3 +197,24 @@ Code we add to tell Typescript what type of arguments a function will receive an
 ### Type inference for functions
 
 Typescript tries to figure out what type of value a function will **return**
+
+- Whenever working with **functions**, we are going to rely upon **Annotations 100%** for both arguments and return types
+
+- Whenever working with **variables**, we rely upon Inference as much as we possible can, unless we are in the 3 scenarios:
+  - function that returns 'any
+  - delayed initialization
+  - variable that type can't be inferred
+
+## Typed Arrays
+
+Arrays where each element is some consistent type of value
+
+### Why do we care?
+
+- TS can do type inference when extracting values from an array
+
+- TS can prevent us from adding incompatible values to the array
+
+- We can get help with 'map', 'forEach', 'reduce' functions
+
+- Flexible - arrays can still contain multiple different types
