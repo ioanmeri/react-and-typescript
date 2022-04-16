@@ -274,3 +274,27 @@ From example
 
 - Object #2
   - Myst satisfy the 'XYZ' interface also
+
+## Classes
+
+Blueprint to create an object with some fields (values) and methods (functions) to represent a 'thing'
+
+### Modifiers
+
+- public
+
+  - This method can be called any where, any time
+
+- private
+
+  - This method can only be called by other methods in this class
+
+- protected
+
+  - This method can be called by other methods in this class, or by other methods in child classes
+
+### Why we care
+
+- When you define a method as being private, we are not adding any layer of application security
+
+- We mark as private, to restrict methods that other developers can call
