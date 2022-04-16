@@ -201,7 +201,7 @@ Typescript tries to figure out what type of value a function will **return**
 - Whenever working with **functions**, we are going to rely upon **Annotations 100%** for both arguments and return types
 
 - Whenever working with **variables**, we rely upon Inference as much as we possible can, unless we are in the 3 scenarios:
-  - function that returns 'any
+  - function that returns 'any'
   - delayed initialization
   - variable that type can't be inferred
 
@@ -218,3 +218,59 @@ Arrays where each element is some consistent type of value
 - We can get help with 'map', 'forEach', 'reduce' functions
 
 - Flexible - arrays can still contain multiple different types
+
+## Tuples
+
+Array-like structure where each element represents some property of a record
+
+```
+{
+  "color": "brown",
+  "carbonated": true,
+  "sugar": 40
+}
+```
+
+to tuple:
+
+```
+["brown", true, 40]
+```
+
+- Fixed order of elements
+
+- if we use a tuple to represent some meaningful data, it's really hard for engineers to understand the meaning of the data
+
+## Interfaces
+
+Interfaces + Classes = Hot to get really strong code reuse in TS
+
+Creates a new type, describing the property names and value types of an object
+
+From example
+
+- Interface Reportable
+
+  - Reportable is a gatekeeper to 'printSummary'
+
+- oldCivic, drink
+  - Must satisfy the 'Reportable' interface to work with 'printSummary'
+
+### General Strategy for Reusable Code in TS
+
+1. Create functions that accept arguments that are typed with interfaces
+
+2. Objects/classes can decide to 'implement' a given interface to work with a function
+
+- interface XYZ
+
+  - XYZ is a gatekeeper to 'some function'
+
+- some function
+
+- Object #1
+
+  - Must satisfy the 'XYZ' interface to work with 'some function'
+
+- Object #2
+  - Myst satisfy the 'XYZ' interface also
