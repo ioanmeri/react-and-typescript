@@ -298,3 +298,51 @@ Blueprint to create an object with some fields (values) and methods (functions) 
 - When you define a method as being private, we are not adding any layer of application security
 
 - We mark as private, to restrict methods that other developers can call
+
+## Tools
+
+Tool to help us run Typescript in the browser
+
+```
+npm install -g parcel-bundler
+```
+
+- Start with parcel tool
+
+- feed a `index.html` file into it
+
+- Parcel is going to see a script tag `script of 'index.ts'`
+
+- Parcel will compile it to JS then replace this script tag
+
+```
+parcel index.html
+```
+
+### Type Definition File
+
+The vast majority of time that you are using a JS project inside of your typescript code, you might have to install that type definition file. Some JS libraries include that type definition file by default, other ones less popular do not include it automatically, so you will have to install it separately.
+
+e.g.
+
+```
+npm install @types/faker
+```
+
+### Google maps global object
+
+Install type definition file to tell TS there is a global variable called google and all the different properties and functions that it has
+
+- By creating a `CustomMap` that has a private property a Google maps instance, **we completely eliminated the API surface** of the Google Map, which significantly decreases the complexity of our application.
+
+- **Invert dependency**: Rather than custom map depend on all these dependencies (User.ts, Company.ts, CarLot.ts, Park.ts...), it is up to it's class (User.ts) to satisfy the maps requirements
+
+- Add instructions on how to be an argument to 'addMarker'
+
+## App Overview
+
+- Limit the API surface of the google map by creating a private method to hold a new map instance
+
+- Invert dependency by using an interface: Instead of Custom map trying to accommodate all the different classes, other classes have to accommodate Custom Map
+
+- Start seeing errors in the correct location. We can optionally choose to implement an interface.
