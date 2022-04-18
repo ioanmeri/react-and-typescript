@@ -58,3 +58,26 @@ export const ChildAsFC: React.FC<ChildProps> = ({ color }) => {
 - 'Child' might have properties assigned to it like 'propTypes' and 'contextTypes'
 
 - 'Child' will receive props of type 'ChildProps'
+
+## Types around State
+
+When type inference does work:
+
+```
+const [name, setName] = useState('');
+```
+
+Initialize an array and define a value for it
+
+```
+const [guests, setGuests] = useState<string[]>([]);
+```
+
+otherwise it is automatically inferred to `never[]` type as it is an empty array and TS has not idea of the type, and actually does not expect to have any value
+
+With different type of values:
+
+```
+  const [user, setUser] = useState<{ name: string, age: number } | undefined>();
+
+```
