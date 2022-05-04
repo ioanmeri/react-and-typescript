@@ -31,3 +31,13 @@ Repositories Reducer will receive three different kinds of
 - {type: 'search_repositories'}
 - {type: 'search_repositories_success', payload: string[]}
 - {type: 'search_repositories_failure', payload: string}
+
+## Wrap up
+
+### Big Issues with Redux/React-Redux + Typescript
+
+- Imports between files can turn into a mess very quickly
+
+- Communicating types over to your components can be challenging
+
+- Type def files for Redux, React-Redux, and others are possibly over-engineered
