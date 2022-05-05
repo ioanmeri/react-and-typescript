@@ -41,3 +41,11 @@ Repositories Reducer will receive three different kinds of
 - Communicating types over to your components can be challenging
 
 - Type def files for Redux, React-Redux, and others are possibly over-engineered
+
+# Redux + Plain JS template
+
+npx create-react-app my-app --template redux
+
+# Redux + TypeScript template
+
+npx create-react-app my-app --template redux-typescript

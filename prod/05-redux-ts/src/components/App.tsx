@@ -4,12 +4,13 @@ import RepositoriesList from './RepositoriesList';
 
 const App = () => {
   return (
-    <Provider store={store}>
+    <Provider>
       <div>
         <h1>Search For a Package</h1>
         <RepositoriesList />
       </div>
-    </Provider>
+      </Provider>
+
   );
 }
 
